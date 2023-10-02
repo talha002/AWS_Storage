@@ -1,4 +1,4 @@
-With Jupyter lab we will read csv file form S3 bucket, do some transformations with pandas then write dataset to S3 bucket.
+# Task: With Jupyter lab we will read csv file form S3 bucket, do some transformations with pandas then write dataset to S3 bucket.
 
 ## Create Security Group - Inbound for SSH (22) and Jupyter (8888)
 - EC2 service 
