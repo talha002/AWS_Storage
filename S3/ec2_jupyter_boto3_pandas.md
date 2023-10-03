@@ -1,5 +1,25 @@
 # Task: With Jupyter lab we will read csv file form S3 bucket, do some transformations with pandas then write dataset to S3 bucket.
 
+## Dowmload Dirty Transaction Data Set to Local
+- Open terminal or cmd
+- Enter:
+```commandline
+wget https://raw.githubusercontent.com/erkansirin78/datasets/master/dirty_store_transactions.csv
+```
+
+## Upload the Data Set to S3
+- Connect to AWS by using AWS CLI (If you dont know how you can check [here](https://github.com/talha002/AWS_Basics)
+- Enter (change 'my-bucket' with bucketname you wish, change 'eu-central-1' with the region you wish):
+```commandline
+wget https://raw.githubusercontent.com/erkansirin78/datasets/master/dirty_store_transactions.csv
+
+aws s3api create-bucket \
+    --bucket my-bucket \ 0
+    --create-bucket-configuration LocationConstraint=eu-central-1
+
+aws s3 cp dirty_store_transactions.csv s3://vbo-aws-dataops/my-bucket/dirty_store_transactions.csv
+```
+
 ## Create Security Group - Inbound for SSH (22) and Jupyter (8888)
 - EC2 service 
 - Create security group
