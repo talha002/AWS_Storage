@@ -40,6 +40,7 @@ sudo dnf install mariadb105
 - DB instance identifier: s3-ec2-rds
 - Master password: password
 - Select ec2 instance
+- Additional configuration -> initial database name: rds-practice
 
 ## SSH Jupyter Instance 
 - Connect to rds mysql
